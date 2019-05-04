@@ -2,10 +2,25 @@ import React from 'react'
 
 import Article, { ArticleConsumerPropTypes } from '../Article'
 
-import pic03 from '../../images/pic03.jpg'
+const SocialIcon = ({ site, url }) => (
+  <li>
+    <a href={url} className={`icon fa-${site}`} target="_blank">
+      <span className="label">{site}</span>
+    </a>
+  </li>
+)
+
+const socialIcons = [
+  { site: 'github', url: 'https://github.com/cocoa-consulting' },
+  {
+    site: 'linkedin',
+    url: 'https://www.linkedin.com/company/cocoa-consulting',
+  },
+  { site: 'twitter', url: 'https://twitter.com/cocoacons' },
+]
 
 const Services = props => (
-  <Article id={'contact'} title={'Contact Us'} img={pic03} {...props}>
+  <Article id={'contact'} title={'Contact Us'} {...props}>
     <form method="post" action="#">
       <div className="field half first">
         <label htmlFor="name">Name</label>
@@ -29,26 +44,9 @@ const Services = props => (
       </ul>
     </form>
     <ul className="icons">
-      <li>
-        <a href="#" className="icon fa-twitter">
-          <span className="label">Twitter</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" className="icon fa-facebook">
-          <span className="label">Facebook</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" className="icon fa-instagram">
-          <span className="label">Instagram</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" className="icon fa-github">
-          <span className="label">GitHub</span>
-        </a>
-      </li>
+      {socialIcons.map(si => (
+        <SocialIcon {...si} />
+      ))}
     </ul>
   </Article>
 )
