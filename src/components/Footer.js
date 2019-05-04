@@ -12,13 +12,13 @@ const Footer = props => (
     <p>
       <span>
         &copy; {companyInfo.founded.year} – {new Date().getFullYear()}{' '}
-        {companyInfo.name}
+        {companyInfo.name.full}
       </span>
       <span>Company No. {companyInfo.companyNo}</span>
       <span>VAT No. {companyInfo.vatNo}</span>
     </p>
     <p className="company__reg-info">
-      {companyInfo.name} {companyInfo.registration}
+      {companyInfo.name.full} {companyInfo.registration}
     </p>
     <p className="company__reg-office">{companyInfo.registeredOffice}</p>
   </footer>

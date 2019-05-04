@@ -1,5 +1,9 @@
 export default {
-  name: 'Cocoa Consulting Ltd',
+  name: {
+    short: 'Cocoa',
+    standard: 'Cocoa Consulting',
+    full: 'Cocoa Consulting Ltd',
+  },
   companyNo: '09255412',
   vatNo: '206 9562 00',
   registration: 'is a company registered in England and Wales',
