@@ -4,7 +4,12 @@ import Article, { ArticleConsumerPropTypes } from '../Article'
 
 const SocialIcon = ({ site, url }) => (
   <li>
-    <a href={url} className={`icon fa-${site}`} target="_blank">
+    <a
+      href={url}
+      className={`icon fa-${site}`}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <span className="label">{site}</span>
     </a>
   </li>

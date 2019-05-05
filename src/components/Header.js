@@ -2,16 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import companyInfo from '../data/company'
+import logo from '../assets/cocoa-cube--white.png'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
-      <span className="icon fa-diamond" />
+      <img src={logo} alt="cocoa consulting" />
     </div>
     <div className="content">
       <div className="inner">
         <h1>{companyInfo.name.standard}</h1>
-        <p>A</p>
+        <p>
+          We are a small development & IT consultancy, based in Lancashire and
+          Worcester.
+        </p>
       </div>
     </div>
     <nav>
